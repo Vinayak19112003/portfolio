@@ -39,7 +39,7 @@ export default function TextReveal() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        className="text-2xl font-bold text-center mask-r-from-0.5 max-w-5xl leading-relaxed text-muted-foreground"
+        className="text-2xl font-bold text-center mask-r-from-0.5 max-w-5xl leading-relaxed text-foreground"
       >
         {words.map((word, index) => (
           <motion.span
