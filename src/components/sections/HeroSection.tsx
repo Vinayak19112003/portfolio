@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import { Lanyard } from '../Lanyard';
-
 
 export function HeroSection() {
     return (
@@ -40,20 +38,19 @@ export function HeroSection() {
                         </div>
                     </motion.div>
                     <motion.div
-                        className="relative mx-auto h-[400px] w-full max-w-md lg:h-auto lg:max-w-none"
+                        className="relative mx-auto h-[400px] w-full max-w-md lg:h-[500px] lg:w-[500px] lg:max-w-none"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                          <Image
                             src="https://placehold.co/500x500.png"
-                            alt="Developer workspace"
-                            data-ai-hint="developer workspace"
+                            alt="Tamil Maran profile picture"
+                            data-ai-hint="profile picture"
                             width={500}
                             height={500}
-                            className="absolute inset-0 h-full w-full rounded-full object-cover opacity-10 blur-md"
+                            className="h-full w-full rounded-full object-cover shadow-2xl"
                         />
-                        <Lanyard />
                     </motion.div>
                 </div>
             </div>
