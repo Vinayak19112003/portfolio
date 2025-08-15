@@ -20,6 +20,8 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
 
+import "./Lanyard.css";
+
 extend({ MeshLineGeometry, MeshLineMaterial });
 
 interface LanyardProps {
