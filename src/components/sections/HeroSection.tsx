@@ -44,7 +44,7 @@ export function HeroSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                          <Image 
-                            src="https://placehold.co/500x500.png"
+                            src="https://pixu.ai/pixu/images/stock/__l3/l308log4.jpg"
                             alt="Tamil Maran Profile Picture"
                             width={500}
                             height={500}
