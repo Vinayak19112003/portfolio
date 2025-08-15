@@ -46,10 +46,8 @@ export function ContactSection() {
                         I'm currently open to new opportunities. Feel free to reach out if you have a project in mind or just want to connect.
                     </motion.p>
                     <motion.div className="mt-10 flex items-center justify-center gap-x-6" variants={itemVariants}>
-                        <ShimmerButton>
-                            <a href="mailto:stamilmaran4@gmail.com" className="flex items-center">
-                                <Mail className="mr-2 h-4 w-4" /> Email Me
-                            </a>
+                        <ShimmerButton href="mailto:stamilmaran4@gmail.com">
+                            <Mail className="mr-2 h-4 w-4" /> Email Me
                         </ShimmerButton>
                     </motion.div>
                     <motion.div
