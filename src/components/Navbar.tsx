@@ -52,7 +52,7 @@ export function Navbar() {
     )}>
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <Link href="#home" className="text-xl font-bold text-primary">
-          Tamil Maran
+          Tamilmaran
         </Link>
         <div className="hidden md:flex items-center gap-2">
           {navItems.map((item) => (

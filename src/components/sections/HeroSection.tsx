@@ -21,7 +21,7 @@ export function HeroSection() {
                         className="text-center"
                     >
                         <h1 className="text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl md:text-7xl bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-cyan-300 animate-gradient-xy">
-                            Tamil Maran
+                            Tamilmaran
                         </h1>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}

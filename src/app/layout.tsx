@@ -5,8 +5,8 @@ import { ClientProviders } from '@/components/ClientProviders';
 
 
 export const metadata: Metadata = {
-  title: 'Tamil Maran | Full Stack Developer',
-  description: "The official portfolio of Tamil Maran, a Full Stack Developer specializing in clean, efficient, and responsive web solutions.",
+  title: 'Tamilmaran | Full Stack Developer',
+  description: "The official portfolio of Tamilmaran, a Full Stack Developer specializing in clean, efficient, and responsive web solutions.",
 };
 
 export default function RootLayout({
