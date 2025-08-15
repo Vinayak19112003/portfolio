@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { OrbitingSkills } from '../OrbitingSkills';
+import OrbitingSkills from '../OrbitingSkills';
 
 export function SkillsSection() {
     return (
