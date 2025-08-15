@@ -3,10 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
-import { useTheme } from '@/hooks/use-theme';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -21,7 +20,6 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,14 +68,8 @@ export function Navbar() {
               </Link>
             </Button>
           ))}
-           <Button onClick={toggleTheme} variant="ghost" size="icon">
-            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
         </div>
         <div className="md:hidden flex items-center">
-           <Button onClick={toggleTheme} variant="ghost" size="icon">
-            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
           <Button onClick={toggleMenu} variant="ghost" size="icon">
             <Menu className="h-6 w-6" />
           </Button>
