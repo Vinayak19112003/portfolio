@@ -47,9 +47,7 @@ export function HeroSection() {
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="mt-10 flex items-center justify-center gap-4"
                         >
-                            <ShimmerButton>
-                                <Link href="#contact">Contact Me</Link>
-                            </ShimmerButton>
+                            <ShimmerButton href="#contact">Contact Me</ShimmerButton>
                             <Button asChild variant="outline" size="lg">
                                 <Link href="#projects">View My Work</Link>
                             </Button>
