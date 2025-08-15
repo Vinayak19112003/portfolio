@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Lanyard from '../Lanyard';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 
@@ -43,14 +43,7 @@ export function HeroSection() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                         <Image
-                            src="https://placehold.co/500x500.png"
-                            alt="Tamil Maran profile picture"
-                            data-ai-hint="profile picture"
-                            width={500}
-                            height={500}
-                            className="h-full w-full rounded-full object-cover shadow-2xl"
-                        />
+                         <Lanyard />
                     </motion.div>
                 </div>
             </div>
