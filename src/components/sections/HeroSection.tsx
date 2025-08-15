@@ -3,14 +3,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-
-const Lanyard = dynamic(() => import('../Lanyard').then(mod => mod.Lanyard), {
-    ssr: false,
-    loading: () => <div className="w-full h-full min-h-[300px] md:min-h-[400px] lg:min-h-[500px] aspect-square" />
-});
+import { Lanyard } from '../Lanyard';
 
 
 export function HeroSection() {
