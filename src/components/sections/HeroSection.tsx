@@ -5,15 +5,13 @@ import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import ShimmerButton from '../ShimmerButton';
+import LightRays from '../LightRays';
+import '../LightRays.css';
 
 export function HeroSection() {
     return (
         <section id="home" className="relative w-full overflow-hidden bg-background py-32 sm:py-40">
-            <div className="absolute inset-0 z-0 opacity-20">
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary via-transparent to-secondary opacity-30" />
-                <div className="absolute bottom-0 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
-                <div className="absolute top-0 right-1/4 h-32 w-32 rounded-full bg-secondary/10 blur-3xl" />
-            </div>
+            <LightRays />
             <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 items-center gap-12">
                     <motion.div
