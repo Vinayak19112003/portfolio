@@ -4,9 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-const Lanyard = dynamic(() => import('../Lanyard'), { ssr: false });
+import Image from 'next/image';
 
 export function HeroSection() {
     return (
@@ -40,12 +38,19 @@ export function HeroSection() {
                         </div>
                     </motion.div>
                     <motion.div
-                        className="relative mx-auto h-[400px] w-full max-w-md lg:h-[500px] lg:w-[500px] lg:max-w-none"
+                        className="relative mx-auto h-[400px] w-full max-w-md lg:h-[500px] lg:w-[500px] lg:max-w-none flex items-center justify-center"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                         <Lanyard />
+                         <Image 
+                            src="https://placehold.co/500x500.png"
+                            alt="Placeholder Image"
+                            width={500}
+                            height={500}
+                            className="rounded-lg object-cover"
+                            data-ai-hint="portfolio developer"
+                         />
                     </motion.div>
                 </div>
             </div>
