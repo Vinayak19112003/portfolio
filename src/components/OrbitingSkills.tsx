@@ -2,9 +2,9 @@
 import React, { useEffect, useState, memo } from 'react';
 
 // --- Type Definitions ---
-type IconType = 'html' | 'css' | 'javascript' | 'react' | 'node' | 'tailwind';
+type IconType = 'html' | 'css' | 'javascript' | 'react' | 'node' | 'git' | 'github' | 'java' | 'mysql' | 'mongodb' | 'netbeans';
 
-type GlowColor = 'cyan' | 'purple';
+type GlowColor = 'cyan' | 'purple' | 'green';
 
 interface SkillIconProps {
   type: IconType;
@@ -80,13 +80,53 @@ const iconComponents: Record<IconType, { component: () => React.JSX.Element; col
     ),
     color: '#339933'
   },
-  tailwind: {
+  git: {
     component: () => (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-        <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" fill="#06B6D4"/>
+        <path d="M22.012 10.372a.853.853 0 0 0-.853-.853h-3.413a.853.853 0 0 0 0 1.706h2.24l-3.328 3.328a.853.853 0 0 0 .604 1.457.844.844 0 0 0 .603-.25l3.328-3.328v2.24a.853.853 0 1 0 1.706 0v-4.27zm-2.024 8.794a.853.853 0 0 0-.604-1.457.844.844 0 0 0-.603.25l-3.328 3.328v-8.483a.853.853 0 1 0-1.706 0v8.483l-3.328-3.328a.853.853 0 1 0-1.206 1.206l4.98 4.98a.853.853 0 0 0 1.207 0l4.98-4.98a.853.853 0 0 0 0-1.206zM9.01 1.988a.853.853 0 0 0-.604 1.457l3.328 3.328H9.493a.853.853 0 1 0 0 1.706h4.27a.853.853 0 0 0 .853-.853V3.413a.853.853 0 0 0-1.706 0v2.24l-3.328-3.328a.844.844 0 0 0-.603-.25zM6.988 9.92a2.56 2.56 0 1 0 0-5.12 2.56 2.56 0 0 0 0 5.12zm0 1.706a4.267 4.267 0 1 1 0-8.534 4.267 4.267 0 0 1 0 8.534zM1.988 9.92a.853.853 0 1 0 0-1.706H.853a.853.853 0 1 0 0 1.706h1.134zm17.62-5.932a.853.853 0 1 0-1.206 1.206L19.61 6.4a2.549 2.549 0 0 0-3.604 0 2.56 2.56 0 1 0-3.604 3.604l-1.206 1.206a.853.853 0 1 0 1.206 1.206l1.206-1.206a4.254 4.254 0 0 1 3.604 0 4.267 4.267 0 1 1 3.604-3.604l-1.206-1.206z" fill="#F05033"/>
       </svg>
     ),
-    color: '#06B6D4'
+    color: '#F05033'
+  },
+  github: {
+    component: () => (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" fill="#FFFFFF"/>
+      </svg>
+    ),
+    color: '#FFFFFF'
+  },
+  java: {
+    component: () => (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+        <path d="M12.943 5.433c-2.21-.497-3.662.062-4.527.653.208-.94.9-2.617 2.37-2.617 1.01 0 1.94.708 2.157 2.026v-.062zM9.01 19.82c.98-.636 2.02-.917 3.518-.917 2.157 0 3.227.813 3.227 2.188 0 .145-.04.228-.08.288-.06.082-.163.144-.33.144-.145 0-.25-.062-.29-.124-.04-.082-.06-.184-.06-.33 0-.616-.77-1.02-1.79-1.02-1.114 0-2.31.576-2.808 1.083-.5.507-.636.938-.636 1.353 0 .476.124.793.456 1.022.25.163.635.25.96.25.556 0 1.254-.184 1.77-.636l.208.208c-.73.655-1.57.918-2.39.918-1.213 0-2.115-.596-2.645-1.374-.475-.772-.656-1.75-.656-2.58 0-1.295.39-2.45 1.15-3.268zm11.305-6.953c-.35-2.026-1.55-3.6-3.13-4.63-.5-.33-1.01-.595-1.55-.793-.75-.27-1.55-.415-2.43-.415-.81 0-1.57.103-2.31.31-1.35.37-2.5 1.04-3.46 1.968-.94 1.01-1.59 2.22-1.89 3.557-.33 1.332-.31 2.85.04 4.14.35 1.312 1.01 2.5 1.93 3.483 1.17 1.196 2.73 2.027 4.51 2.458 1.93.435 3.92.31 5.48-.37 1.29-.577 2.37-1.48 3.11-2.646.29-.456.54-.96.71-1.48.33-1.03.45-2.1.41-3.226zm-7.94-5.748c1.372 0 2.54.556 2.54 1.832 0 1.853-1.05 2.56-3.03 2.92-1.45.27-2.83.615-2.83 2.146 0 .39.145.617.37.794.16.124.45.228.67.228.45 0 .9-.207 1.25-.536.57-.557 1.09-1.255 1.09-2.126h2.23c0 1.296-.41 2.47-1.15 3.29-.67.75-1.63 1.21-2.73 1.21-1.47 0-2.45-.636-3.09-1.528-.61-1.01-.81-2.266-.81-3.42 0-2.373 1.33-3.374 3.44-3.79 1.29-.25 2.89-.636 2.89-2.228 0-1.05-.75-1.75-1.85-1.75-.98 0-1.75.536-2.25 1.15-.31.414-.58.98-.58 1.48h-2.23c0-.98.25-1.928.81-2.71.61-.832 1.55-1.418 2.69-1.418z" fill="#f89820"/>
+      </svg>
+    ),
+    color: '#f89820'
+  },
+  mysql: {
+    component: () => (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+        <path d="M12.01,2C6.49,2,2,6.49,2,12.01s4.49,10.01,10.01,10.01,10.01-4.49,10.01-10.01S17.53,2,12.01,2ZM18.78,8.13c0,0.4-0.32,0.72-0.72,0.72h-1.3v3.74c0,0.4-0.32,0.72-0.72,0.72h-0.96c-0.4,0-0.72-0.32-0.72-0.72V8.85h-0.89v3.02c0,0.4-0.32,0.72-0.72,0.72H12.03c-0.4,0-0.72-0.32-0.72-0.72V8.85h-0.89v3.74c0,0.4-0.32,0.72-0.72,0.72H8.74c-0.4,0-0.72-0.32-0.72-0.72V8.85H6.68c-0.4,0-0.72-0.32-0.72-0.72V7.17c0-0.4,0.32-0.72,0.72-0.72H18.06c0.4,0,0.72,0.32,0.72,0.72V8.13ZM15.82,15.85c0,0.11-0.09,0.2-0.2,0.2H14.19c-0.11,0-0.2-0.09-0.2-0.2v-0.64h2.03V15.85ZM9.81,15.85c0,0.11-0.09,0.2-0.2,0.2H8.18c-0.11,0-0.2-0.09-0.2-0.2v-0.64h2.03V15.85Z M18.17,17.48v-0.59h-2.12c-0.4,0-0.72,0.32-0.72,0.72v0.84h-1.92v-0.84c0-0.4-0.32-0.72-0.72-0.72H9.97c-0.4,0-0.72,0.32-0.72,0.72v0.84H7.33v-0.84c0-0.4-0.32-0.72-0.72-0.72H4.49v0.59c-0.47,0.16-0.8,0.59-0.8,1.11,0,0.64,0.52,1.16,1.16,1.16h13.29c0.64,0,1.16-0.52,1.16-1.16C18.97,18.07,18.64,17.64,18.17,17.48Z" fill="#00758F"/>
+      </svg>
+    ),
+    color: '#00758F'
+  },
+  mongodb: {
+    component: () => (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+        <path d="M12.16,3.38A12.11,12.11,0,0,0,8.5,14.2a3.17,3.17,0,0,0,1,1.54,6.44,6.44,0,0,0,4.27,1.48,15.63,15.63,0,0,0,4.38-2.4A10.4,10.4,0,0,0,12.16,3.38Zm1.43,10.15a.71.71,0,0,1-.62.38,1.4,1.4,0,0,1-1.18-.7,1,1,0,0,1-.13-1.1,1.13,1.13,0,0,1,1.06-.6,1.41,1.41,0,0,1,1.17.65.91.91,0,0,1,.12,1,.61.61,0,0,1-.42.4Zm6.56-5.35A11.41,11.41,0,0,0,14,1.35C10.23.8,4.7,4.33,4.19,10.13a10.7,10.7,0,0,0,3.42,8.65,11.5,11.5,0,0,0,10.33,1.43c4.85-2,6.33-8,4.32-12.86Z" fill="#4DB33D"/>
+      </svg>
+    ),
+    color: '#4DB33D'
+  },
+  netbeans: {
+    component: () => (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.12 15.19l-3.37-3.37.71-.71 2.66 2.66 5.66-5.66.71.71-6.37 6.37z" fill="#1B6AC6"/>
+      </svg>
+    ),
+    color: '#1B6AC6'
   }
 };
 
@@ -102,7 +142,7 @@ const skillsConfig: SkillConfig[] = [
   // Inner Orbit
   { 
     id: 'html',
-    orbitRadius: 100, 
+    orbitRadius: 80, 
     size: 40, 
     speed: 1, 
     iconType: 'html', 
@@ -112,54 +152,105 @@ const skillsConfig: SkillConfig[] = [
   },
   { 
     id: 'css',
-    orbitRadius: 100, 
+    orbitRadius: 80, 
     size: 45, 
     speed: 1, 
     iconType: 'css', 
-    phaseShift: (2 * Math.PI) / 3, 
+    phaseShift: (2 * Math.PI) / 4, 
     glowColor: 'cyan',
     label: 'CSS3'
   },
   { 
     id: 'javascript',
-    orbitRadius: 100, 
+    orbitRadius: 80, 
     size: 40, 
     speed: 1, 
     iconType: 'javascript', 
-    phaseShift: (4 * Math.PI) / 3, 
+    phaseShift: (4 * Math.PI) / 4, 
     glowColor: 'cyan',
     label: 'JavaScript'
   },
-  // Outer Orbit
   { 
     id: 'react',
-    orbitRadius: 180, 
+    orbitRadius: 80, 
     size: 50, 
-    speed: -0.6, 
+    speed: 1, 
     iconType: 'react', 
-    phaseShift: 0, 
-    glowColor: 'purple',
+    phaseShift: (6 * Math.PI) / 4, 
+    glowColor: 'cyan',
     label: 'React'
   },
+  // Middle Orbit
   { 
     id: 'node',
-    orbitRadius: 180, 
+    orbitRadius: 150, 
     size: 45, 
     speed: -0.6, 
     iconType: 'node', 
-    phaseShift: (2 * Math.PI) / 3, 
+    phaseShift: 0, 
     glowColor: 'purple',
     label: 'Node.js'
   },
   { 
-    id: 'tailwind',
-    orbitRadius: 180, 
+    id: 'git',
+    orbitRadius: 150, 
     size: 40, 
     speed: -0.6, 
-    iconType: 'tailwind', 
-    phaseShift: (4 * Math.PI) / 3, 
+    iconType: 'git', 
+    phaseShift: (2 * Math.PI) / 4, 
     glowColor: 'purple',
-    label: 'Tailwind CSS'
+    label: 'Git'
+  },
+  { 
+    id: 'github',
+    orbitRadius: 150, 
+    size: 40, 
+    speed: -0.6, 
+    iconType: 'github', 
+    phaseShift: (4 * Math.PI) / 4, 
+    glowColor: 'purple',
+    label: 'GitHub'
+  },
+  { 
+    id: 'java',
+    orbitRadius: 150, 
+    size: 45, 
+    speed: -0.6, 
+    iconType: 'java', 
+    phaseShift: (6 * Math.PI) / 4, 
+    glowColor: 'purple',
+    label: 'Java'
+  },
+  // Outer Orbit
+  { 
+    id: 'mysql',
+    orbitRadius: 220, 
+    size: 50, 
+    speed: 0.4, 
+    iconType: 'mysql', 
+    phaseShift: 0, 
+    glowColor: 'green',
+    label: 'MySQL'
+  },
+  { 
+    id: 'mongodb',
+    orbitRadius: 220, 
+    size: 45, 
+    speed: 0.4, 
+    iconType: 'mongodb', 
+    phaseShift: (2 * Math.PI) / 3, 
+    glowColor: 'green',
+    label: 'MongoDB'
+  },
+  { 
+    id: 'netbeans',
+    orbitRadius: 220, 
+    size: 40, 
+    speed: 0.4, 
+    iconType: 'netbeans', 
+    phaseShift: (4 * Math.PI) / 3, 
+    glowColor: 'green',
+    label: 'NetBeans'
   },
 ];
 
@@ -220,6 +311,11 @@ const GlowingOrbitPath = memo(({ radius, glowColor = 'cyan', animationDelay = 0 
       primary: 'rgba(147, 51, 234, 0.4)',
       secondary: 'rgba(147, 51, 234, 0.2)',
       border: 'rgba(147, 51, 234, 0.3)'
+    },
+    green: {
+      primary: 'rgba(16, 185, 129, 0.4)',
+      secondary: 'rgba(16, 185, 129, 0.2)',
+      border: 'rgba(16, 185, 129, 0.3)'
     }
   };
 
@@ -285,13 +381,14 @@ export default function OrbitingSkills() {
   }, [isPaused]);
 
   const orbitConfigs: Array<{ radius: number; glowColor: GlowColor; delay: number }> = [
-    { radius: 100, glowColor: 'cyan', delay: 0 },
-    { radius: 180, glowColor: 'purple', delay: 1.5 }
+    { radius: 80, glowColor: 'cyan', delay: 0 },
+    { radius: 150, glowColor: 'purple', delay: 1 },
+    { radius: 220, glowColor: 'green', delay: 2 }
   ];
   
   if (time === null) {
       // Render nothing or a placeholder on the server and initial client render
-      return null;
+      return <div className="relative w-[calc(100vw-40px)] h-[calc(100vw-40px)] md:w-[500px] md:h-[500px]" />;
   }
 
   return (
@@ -308,7 +405,7 @@ export default function OrbitingSkills() {
       </div>
 
       <div 
-        className="relative w-[calc(100vw-40px)] h-[calc(100vw-40px)] md:w-[450px] md:h-[450px] flex items-center justify-center"
+        className="relative w-[calc(100vw-40px)] h-[calc(100vw-40px)] md:w-[500px] md:h-[500px] flex items-center justify-center"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
