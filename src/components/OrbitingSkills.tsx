@@ -260,10 +260,13 @@ GlowingOrbitPath.displayName = 'GlowingOrbitPath';
 
 // --- Main App Component ---
 export default function OrbitingSkills() {
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState<number | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    // Start animation only on the client
+    setTime(0);
+
     if (isPaused) return;
 
     let animationFrameId: number;
@@ -273,7 +276,7 @@ export default function OrbitingSkills() {
       const deltaTime = (currentTime - lastTime) / 1000;
       lastTime = currentTime;
 
-      setTime(prevTime => prevTime + deltaTime);
+      setTime(prevTime => (prevTime !== null ? prevTime + deltaTime : 0));
       animationFrameId = requestAnimationFrame(animate);
     };
 
@@ -285,6 +288,11 @@ export default function OrbitingSkills() {
     { radius: 100, glowColor: 'cyan', delay: 0 },
     { radius: 180, glowColor: 'purple', delay: 1.5 }
   ];
+  
+  if (time === null) {
+      // Render nothing or a placeholder on the server and initial client render
+      return null;
+  }
 
   return (
     <main className="w-full flex items-center justify-center overflow-hidden">
