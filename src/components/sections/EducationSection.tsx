@@ -8,7 +8,7 @@ export function EducationSection() {
     return (
         <motion.section
             id="education"
-            className="w-full py-24 sm:py-32"
+            className="w-full py-16 sm:py-24"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -21,7 +21,7 @@ export function EducationSection() {
                         My academic journey and qualifications.
                     </p>
                 </div>
-                <div className="mt-16 flex justify-center">
+                <div className="mt-12 flex justify-center">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export function EducationSection() {
                                     <p className="text-sm text-muted-foreground">2021 – 2025</p>
                                 </div>
                             </CardHeader>
-                            <CardContent className="p-6 text-muted-foreground">
+                            <CardContent className="p-6 pt-0 text-muted-foreground">
                                 <p><strong>St. Joseph’s College of Engineering and Technology, Thanjavur</strong></p>
                                 <p className="mt-2">Pursuing a comprehensive curriculum focused on core computer science principles, software development, and engineering practices.</p>
                             </CardContent>

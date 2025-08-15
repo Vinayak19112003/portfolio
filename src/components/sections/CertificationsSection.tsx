@@ -8,7 +8,7 @@ export function CertificationsSection() {
     return (
         <motion.section
             id="certifications"
-            className="w-full py-24 sm:py-32"
+            className="w-full py-16 sm:py-24"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -21,7 +21,7 @@ export function CertificationsSection() {
                         My professional training and certifications.
                     </p>
                 </div>
-                <div className="mt-16 flex justify-center">
+                <div className="mt-12 flex justify-center">
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export function CertificationsSection() {
                                     <CardTitle className="text-xl">Full Stack Development</CardTitle>
                                 </div>
                             </CardHeader>
-                            <CardContent className="p-6 text-muted-foreground">
+                            <CardContent className="p-6 pt-0 text-muted-foreground">
                                 <p><strong>Login360, Velachery, Chennai</strong></p>
                                 <p className="mt-2">Completed an intensive certification program covering front-end and back-end technologies, including React, Node.js, and database management.</p>
                             </CardContent>

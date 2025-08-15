@@ -25,7 +25,7 @@ export function ContactSection() {
     return (
         <motion.section
             id="contact"
-            className="w-full bg-background py-24 sm:py-32"
+            className="w-full bg-background py-16 sm:py-24"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -45,13 +45,13 @@ export function ContactSection() {
                     <motion.p className="mt-4 text-lg leading-8 text-muted-foreground" variants={itemVariants}>
                         I'm currently open to new opportunities. Feel free to reach out if you have a project in mind or just want to connect.
                     </motion.p>
-                    <motion.div className="mt-10 flex items-center justify-center gap-x-6" variants={itemVariants}>
+                    <motion.div className="mt-8 flex items-center justify-center gap-x-6" variants={itemVariants}>
                         <ShimmerButton href="mailto:stamilmaran4@gmail.com">
                             <Mail className="mr-2 h-4 w-4" /> Email Me
                         </ShimmerButton>
                     </motion.div>
                     <motion.div
-                        className="mt-12 flex flex-wrap justify-center gap-6 text-muted-foreground"
+                        className="mt-10 flex flex-wrap justify-center gap-6 text-muted-foreground"
                         variants={itemVariants}
                     >
                         <a href="tel:+916374360455" className="flex items-center gap-2 hover:text-primary">

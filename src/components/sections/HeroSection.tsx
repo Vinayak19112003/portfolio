@@ -10,7 +10,7 @@ import '../LightRays.css';
 
 export function HeroSection() {
     return (
-        <section id="home" className="relative w-full overflow-hidden bg-background py-32 sm:py-40">
+        <section id="home" className="relative w-full overflow-hidden bg-background py-24 sm:py-32">
             <LightRays />
             <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 items-center gap-12">
@@ -43,7 +43,7 @@ export function HeroSection() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.6 }}
-                            className="mt-10 flex items-center justify-center gap-4"
+                            className="mt-8 flex items-center justify-center gap-4"
                         >
                             <ShimmerButton href="#contact">Contact Me</ShimmerButton>
                             <Button asChild variant="outline" size="lg">

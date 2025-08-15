@@ -31,7 +31,7 @@ export function AboutSection() {
     return (
         <motion.section
             id="about"
-            className="w-full py-24 sm:py-32"
+            className="w-full py-16 sm:py-24"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -48,12 +48,14 @@ export function AboutSection() {
                     <motion.h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl" variants={itemVariants}>
                         About Me
                     </motion.h2>
-                    <motion.p className="mt-6 text-lg leading-8 text-muted-foreground" variants={itemVariants}>
+                    <motion.p className="mt-4 text-lg leading-8 text-muted-foreground" variants={itemVariants}>
                         A highly motivated Full Stack Developer with strong knowledge of HTML, CSS, JavaScript, React, Node.js, and MongoDB. Skilled in building responsive web interfaces and developing RESTful APIs. Quick to learn new technologies with a focus on clean, efficient code. Eager to contribute to dynamic development teams and grow as a software professional.
                     </motion.p>
-                    <TextReveal />
+                    <div className="mt-8">
+                      <TextReveal />
+                    </div>
                     <motion.div
-                        className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-12"
+                        className="mt-8 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-12"
                         variants={containerVariants}
                     >
                         <motion.div className="flex items-center gap-2" variants={itemVariants}>

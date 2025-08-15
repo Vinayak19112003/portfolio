@@ -7,7 +7,7 @@ export function SkillsSection() {
     return (
         <motion.section
             id="skills"
-            className="w-full overflow-hidden bg-background py-24 sm:py-32"
+            className="w-full overflow-hidden bg-background py-16 sm:py-24"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}

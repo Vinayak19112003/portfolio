@@ -47,7 +47,7 @@ export function ProjectsSection() {
     return (
         <motion.section
             id="projects"
-            className="w-full py-24 sm:py-32"
+            className="w-full py-16 sm:py-24"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.1 }}
@@ -61,7 +61,7 @@ export function ProjectsSection() {
                     </p>
                 </div>
                 <motion.div
-                    className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2"
+                    className="mx-auto mt-12 grid max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
