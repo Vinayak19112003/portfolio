@@ -2,9 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Lanyard from '../Lanyard';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const Lanyard = dynamic(() => import('../Lanyard'), { ssr: false });
 
 export function HeroSection() {
     return (
