@@ -45,11 +45,11 @@ export function HeroSection() {
                     >
                          <Image 
                             src="https://placehold.co/500x500.png"
-                            alt="Placeholder Image"
+                            alt="Tamil Maran Profile Picture"
                             width={500}
                             height={500}
-                            className="rounded-lg object-cover"
-                            data-ai-hint="portfolio developer"
+                            className="rounded-full object-cover shadow-2xl"
+                            data-ai-hint="man portrait"
                          />
                     </motion.div>
                 </div>
