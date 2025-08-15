@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import TextReveal from '../TextReveal';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -50,6 +51,7 @@ export function AboutSection() {
                     <motion.p className="mt-6 text-lg leading-8 text-muted-foreground" variants={itemVariants}>
                         A highly motivated Full Stack Developer with strong knowledge of HTML, CSS, JavaScript, React, Node.js, and MongoDB. Skilled in building responsive web interfaces and developing RESTful APIs. Quick to learn new technologies with a focus on clean, efficient code. Eager to contribute to dynamic development teams and grow as a software professional.
                     </motion.p>
+                    <TextReveal />
                     <motion.div
                         className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-12"
                         variants={containerVariants}
