@@ -6,7 +6,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Physics, RigidBody, BallCollider, RapierRigidBody } from '@react-three/rapier'
 import { RoundedBox, Text } from '@react-three/drei'
 
-export function Lanyard() {
+function LanyardComponent() {
   return (
     <div className="w-full h-full min-h-[300px] md:min-h-[400px] lg:min-h-[500px] aspect-square cursor-grab active:cursor-grabbing">
       <Canvas camera={{ position: [0, 0, 12], fov: 30 }}>
@@ -78,3 +78,5 @@ function Pointer() {
     <RigidBody position={[0, 0, 0]} type="kinematicPosition" colliders="ball" args={[1]} ref={ref} />
   )
 }
+
+export const Lanyard = LanyardComponent;
