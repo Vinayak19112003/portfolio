@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import ShimmerButton from '../ShimmerButton';
 
 export function HeroSection() {
     return (
@@ -46,9 +47,9 @@ export function HeroSection() {
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="mt-10 flex items-center justify-center gap-4"
                         >
-                            <Button asChild size="lg">
+                            <ShimmerButton>
                                 <Link href="#contact">Contact Me</Link>
-                            </Button>
+                            </ShimmerButton>
                             <Button asChild variant="outline" size="lg">
                                 <Link href="#projects">View My Work</Link>
                             </Button>

@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import ShimmerButton from '../ShimmerButton';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -46,11 +46,11 @@ export function ContactSection() {
                         I'm currently open to new opportunities. Feel free to reach out if you have a project in mind or just want to connect.
                     </motion.p>
                     <motion.div className="mt-10 flex items-center justify-center gap-x-6" variants={itemVariants}>
-                        <Button asChild size="lg">
-                            <a href="mailto:stamilmaran4@gmail.com">
+                        <ShimmerButton>
+                            <a href="mailto:stamilmaran4@gmail.com" className="flex items-center">
                                 <Mail className="mr-2 h-4 w-4" /> Email Me
                             </a>
-                        </Button>
+                        </ShimmerButton>
                     </motion.div>
                     <motion.div
                         className="mt-12 flex flex-wrap justify-center gap-6 text-muted-foreground"
