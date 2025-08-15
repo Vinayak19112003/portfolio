@@ -49,7 +49,7 @@ export function HeroSection() {
                             width={500}
                             height={500}
                             className="rounded-full object-cover shadow-2xl"
-                            data-ai-hint="man portrait"
+                            data-ai-hint="professional man"
                          />
                     </motion.div>
                 </div>
