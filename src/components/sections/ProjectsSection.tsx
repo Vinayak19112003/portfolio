@@ -15,7 +15,7 @@ const projects = [
         description: "A console-based vending machine simulation with persistent item and user balance storage.",
         tags: ["Java", "OOP", "File Handling", "NetBeans", "Git"],
         icon: <Code className="h-8 w-8 text-primary" />,
-        screenshotUrl: "https://placehold.co/1280x720.png",
+        screenshotUrl: "https://placehold.co/600x400.png",
         videoUrl: "https://placehold.co/1920x1080.png",
         contribution: "I designed and implemented the core object-oriented architecture, including the file-based persistence system for inventory and user data, ensuring data integrity between sessions.",
         impact: "This project served as a foundational exercise in Java development, reinforcing key principles of object-oriented programming and data handling in a practical, real-world simulation.",
@@ -29,7 +29,7 @@ const projects = [
         description: "A responsive e-commerce front-end focused on providing a smooth and intuitive user experience.",
         tags: ["HTML", "CSS"],
         icon: <ExternalLink className="h-8 w-8 text-primary" />,
-        screenshotUrl: "https://placehold.co/1280x720.png",
+        screenshotUrl: "https://placehold.co/600x400.png",
         videoUrl: "https://placehold.co/1920x1080.png",
         contribution: "I was solely responsible for translating UI/UX mockups into a fully responsive website, focusing on a mobile-first approach to ensure a seamless experience across all devices.",
         impact: "This project was a deep dive into modern CSS and HTML practices, significantly improving my ability to create visually appealing and highly functional user interfaces from scratch.",
@@ -64,7 +64,7 @@ const itemVariants = {
 };
 
 
-const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
+const ProjectCard = ({ project, index }: { project: typeof projects[0], index: number }) => {
     const cardRef = React.useRef<HTMLDivElement>(null);
     const [style, setStyle] = React.useState({});
 
@@ -89,6 +89,10 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
         });
     };
 
+    const screenshotHint = index === 0 ? "code editor" : "website mockup";
+    const videoHint = index === 0 ? "code walkthrough" : "website scroll";
+
+
     return (
         <Dialog>
             <motion.div
@@ -105,7 +109,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
                 >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_hsla(var(--primary),0.2)_0%,_transparent_50%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     <CardHeader className="p-0 relative">
-                        <Image src={project.screenshotUrl} alt={project.title} width={600} height={338} className="w-full h-auto" data-ai-hint="screenshot application" />
+                        <Image src={project.screenshotUrl} alt={project.title} width={600} height={338} className="w-full h-auto" data-ai-hint={screenshotHint} />
                     </CardHeader>
                     <CardContent className="flex-grow p-6">
                         <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
@@ -129,7 +133,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
                 </DialogHeader>
                 <div className="grid gap-6 py-4">
                     <div className="relative aspect-video w-full rounded-lg overflow-hidden border">
-                         <Image src={project.videoUrl} alt={`Video walkthrough for ${project.title}`} layout="fill" objectFit="cover" data-ai-hint="video walkthrough" />
+                         <Image src={project.videoUrl} alt={`Video walkthrough for ${project.title}`} layout="fill" objectFit="cover" data-ai-hint={videoHint} />
                          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                             <Video className="h-12 w-12 text-white/70" />
                          </div>
@@ -183,7 +187,7 @@ export function ProjectsSection() {
                     viewport={{ once: true, amount: 0.1 }}
                 >
                     {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
+                        <ProjectCard key={index} project={project} index={index} />
                     ))}
                 </motion.div>
             </div>
