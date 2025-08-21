@@ -353,7 +353,6 @@ const GlowingOrbitPath = memo(({ radius, glowColor = 'cyan', animationDelay = 0 
       <div
         className="absolute inset-0 rounded-full"
         style={{
-          border: `1px solid ${colors.border}`,
           boxShadow: `inset 0 0 20px ${colors.secondary}`,
         }}
       />
