@@ -7,6 +7,7 @@ import { EducationSection } from "@/components/sections/EducationSection";
 import { CertificationsSection } from "@/components/sections/CertificationsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/Footer";
+import { JourneySection } from "@/components/sections/JourneySection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
+        <JourneySection />
         <SkillsSection />
         <ProjectsSection />
         <EducationSection />
