@@ -80,6 +80,10 @@
     -webkit-mask-image: linear-gradient(to right, transparent, black 50%);
     mask-image: linear-gradient(to right, transparent, black 50%);
   }
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-lg border border-white/10;
+  }
 }
 
 @layer components {

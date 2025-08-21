@@ -10,7 +10,7 @@ import '../LightRays.css';
 
 export function HeroSection() {
     return (
-        <section id="home" className="relative w-full overflow-hidden bg-background py-24 sm:py-32">
+        <section id="home" className="relative w-full overflow-hidden bg-transparent py-24 sm:py-32">
             <LightRays />
             <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 items-center gap-12">
@@ -20,7 +20,11 @@ export function HeroSection() {
                         transition={{ duration: 0.8 }}
                         className="text-center"
                     >
-                        <h1 className="text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl md:text-7xl bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-cyan-300 animate-gradient-xy">
+                        <h1 className="text-5xl font-extrabold tracking-tight text-transparent sm:text-6xl md:text-7xl bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-300 to-sky-400 animate-gradient-xy"
+                        style={{
+                            textShadow: '0 4px 20px rgba(0, 180, 255, 0.3)',
+                        }}
+                        >
                             Tamilmaran
                         </h1>
                         <motion.h2

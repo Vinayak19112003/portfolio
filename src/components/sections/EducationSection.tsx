@@ -29,7 +29,7 @@ export function EducationSection() {
                         transition={{ duration: 0.5 }}
                         className="w-full max-w-lg"
                     >
-                        <Card className="overflow-hidden transition-shadow hover:shadow-xl glowing-border bg-secondary/30">
+                        <Card className="overflow-hidden transition-shadow hover:shadow-xl glowing-border glass-card">
                             <CardHeader className="flex flex-row items-center gap-4 p-6">
                                 <div className="rounded-full bg-primary/10 p-3">
                                     <GraduationCap className="h-6 w-6 text-primary" />

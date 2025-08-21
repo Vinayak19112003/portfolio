@@ -48,7 +48,7 @@ export function Navbar() {
   return (
     <nav className={cn(
       "w-full transition-all duration-300",
-      isScrolled ? "bg-background/80 backdrop-blur-sm shadow-md" : "bg-transparent"
+      isScrolled ? "bg-background/80 backdrop-blur-lg shadow-2xl shadow-primary/10" : "bg-transparent"
     )}>
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <Link href="#home" className="text-xl font-bold text-primary">
@@ -61,8 +61,11 @@ export function Navbar() {
                 {item.name}
                 {activeSection === item.href.substring(1) && (
                   <motion.div
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                    className="absolute bottom-0 left-0 right-0 h-1 bg-purple-500 rounded-full"
                     layoutId="underline"
+                    style={{
+                        boxShadow: '0 0 12px 2px rgba(168, 85, 247, 0.7)'
+                    }}
                   />
                 )}
               </Link>

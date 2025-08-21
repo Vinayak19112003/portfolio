@@ -69,7 +69,7 @@ export function ProjectsSection() {
                 >
                     {projects.map((project, index) => (
                         <motion.div key={index} variants={itemVariants}>
-                            <Card className="flex h-full flex-col bg-secondary/30 glowing-border">
+                            <Card className="flex h-full flex-col glowing-border glass-card">
                                 <CardHeader className="flex flex-row items-start gap-4 p-6">
                                      <div className="rounded-lg bg-primary/10 p-3">
                                         {project.icon}
