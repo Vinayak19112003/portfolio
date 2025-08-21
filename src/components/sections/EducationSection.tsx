@@ -3,6 +3,77 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { GraduationCap } from 'lucide-react';
+import React from 'react';
+
+const itemVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+    },
+  },
+};
+
+
+const EducationCard = () => {
+    const cardRef = React.useRef<HTMLDivElement>(null);
+    const [style, setStyle] = React.useState({});
+
+    const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!cardRef.current) return;
+        const { left, top, width, height } = cardRef.current.getBoundingClientRect();
+        const x = e.clientX - left;
+        const y = e.clientY - top;
+        const rotateX = (y / height - 0.5) * -25;
+        const rotateY = (x / width - 0.5) * 25;
+
+        setStyle({
+            transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`,
+            '--glow-x': `${x}px`,
+            '--glow-y': `${y}px`,
+        });
+    };
+
+    const onMouseLeave = () => {
+        setStyle({
+            transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
+        });
+    };
+
+    return (
+        <motion.div
+            ref={cardRef}
+            className="relative"
+            style={{ transformStyle: "preserve-3d" }}
+            onMouseMove={onMouseMove}
+            onMouseLeave={onMouseLeave}
+            variants={itemVariants}
+        >
+            <Card 
+                className="flex h-full flex-col glass-card transition-all duration-300 ease-out" 
+                style={style}
+            >
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_hsla(var(--primary),0.2)_0%,_transparent_50%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <CardHeader className="flex flex-row items-center gap-4 p-6">
+                    <div className="rounded-full bg-primary/10 p-3">
+                        <GraduationCap className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                        <CardTitle className="text-xl">B.E Computer Science Engineering</CardTitle>
+                        <p className="text-sm text-muted-foreground">2021 – 2025</p>
+                    </div>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 text-muted-foreground">
+                    <p><strong>St. Joseph’s College of Engineering and Technology, Thanjavur</strong></p>
+                    <p className="mt-2">Pursuing a comprehensive curriculum focused on core computer science principles, software development, and engineering practices.</p>
+                </CardContent>
+            </Card>
+        </motion.div>
+    );
+};
 
 export function EducationSection() {
     return (
@@ -21,30 +92,10 @@ export function EducationSection() {
                         My academic journey and qualifications.
                     </p>
                 </div>
-                <div className="mt-12 flex justify-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.5 }}
-                        transition={{ duration: 0.5 }}
-                        className="w-full max-w-lg"
-                    >
-                        <Card className="overflow-hidden transition-shadow hover:shadow-xl glowing-border glass-card">
-                            <CardHeader className="flex flex-row items-center gap-4 p-6">
-                                <div className="rounded-full bg-primary/10 p-3">
-                                    <GraduationCap className="h-6 w-6 text-primary" />
-                                </div>
-                                <div>
-                                    <CardTitle className="text-xl">B.E Computer Science Engineering</CardTitle>
-                                    <p className="text-sm text-muted-foreground">2021 – 2025</p>
-                                </div>
-                            </CardHeader>
-                            <CardContent className="p-6 pt-0 text-muted-foreground">
-                                <p><strong>St. Joseph’s College of Engineering and Technology, Thanjavur</strong></p>
-                                <p className="mt-2">Pursuing a comprehensive curriculum focused on core computer science principles, software development, and engineering practices.</p>
-                            </CardContent>
-                        </Card>
-                    </motion.div>
+                <div className="mt-12 flex justify-center group">
+                    <div className="w-full max-w-lg">
+                        <EducationCard />
+                    </div>
                 </div>
             </div>
         </motion.section>
