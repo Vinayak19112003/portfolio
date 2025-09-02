@@ -51,10 +51,7 @@ export function Navbar() {
       "w-full transition-all duration-300",
       isScrolled ? "bg-background/80 backdrop-blur-lg shadow-2xl shadow-primary/10" : "bg-transparent"
     )}>
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <Link href="#home" className="text-xl font-bold text-primary">
-          H. Mohamed Saleem
-        </Link>
+      <div className="container mx-auto flex items-center justify-end px-4 py-3">
         <div className="hidden md:flex items-center gap-2">
           {navItems.map((item) => (
             <Button key={item.name} variant="ghost" asChild className={cn("relative", activeSection === item.href.substring(1) ? "text-primary" : "")}>
