@@ -5,37 +5,37 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Code, ExternalLink, Video, MessageSquareQuote, Target, Milestone } from 'lucide-react';
+import { BrainCircuit, ExternalLink, Video, MessageSquareQuote, Target, Milestone } from 'lucide-react';
 import React from 'react';
 import Image from 'next/image';
 
 const projects = [
     {
-        title: "Snack Station – Java Console Application",
-        description: "A console-based vending machine simulation with persistent item and user balance storage.",
-        tags: ["Java", "OOP", "File Handling", "NetBeans", "Git"],
-        icon: <Code className="h-8 w-8 text-primary" />,
+        title: "MRI-Based Brain Tumor Image Detection using CNN and Deep Learning",
+        description: "AI-based system for detecting brain tumors in MRI scans.",
+        tags: ["Python", "TensorFlow", "Keras", "NumPy", "Pandas", "Flask", "MySQL"],
+        icon: <BrainCircuit className="h-8 w-8 text-primary" />,
         screenshotUrl: "https://picsum.photos/600/400",
         videoUrl: "https://picsum.photos/1920/1080",
-        contribution: "I designed and implemented the core object-oriented architecture, including the file-based persistence system for inventory and user data, ensuring data integrity between sessions.",
-        impact: "This project served as a foundational exercise in Java development, reinforcing key principles of object-oriented programming and data handling in a practical, real-world simulation.",
+        contribution: "Developed a brain tumor detection system using Convolutional Neural Networks (CNN) and Graph Convolutional Neural Networks (GCNN). The project involved preprocessing MRI images, extracting features, and classifying tumor types (Glioma, Meningioma, Pituitary).",
+        impact: "Achieved high accuracy and demonstrated the potential of AI in medical image analysis. This project provided a reliable AI-driven diagnostic tool and was a significant step in applying theoretical knowledge to a practical, life-saving application.",
         testimonial: {
-            quote: "A clean, well-structured console application that demonstrates a solid understanding of Java fundamentals.",
-            author: "Course Instructor",
+            quote: "An impressive application of deep learning to a complex medical problem. The model's accuracy is a testament to a solid understanding of CNNs.",
+            author: "Academic Advisor",
         }
     },
     {
-        title: "E-Commerce Website – Front-End Development",
-        description: "A responsive e-commerce front-end focused on providing a smooth and intuitive user experience.",
-        tags: ["HTML", "CSS"],
+        title: "Portfolio Website",
+        description: "A responsive personal portfolio to showcase my skills and projects.",
+        tags: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
         icon: <ExternalLink className="h-8 w-8 text-primary" />,
         screenshotUrl: "https://picsum.photos/600/400",
         videoUrl: "https://picsum.photos/1920/1080",
-        contribution: "I was solely responsible for translating UI/UX mockups into a fully responsive website, focusing on a mobile-first approach to ensure a seamless experience across all devices.",
-        impact: "This project was a deep dive into modern CSS and HTML practices, significantly improving my ability to create visually appealing and highly functional user interfaces from scratch.",
+        contribution: "I built this portfolio from the ground up, focusing on a clean UI, smooth animations, and a fully responsive design to ensure a great user experience on all devices.",
+        impact: "This project sharpened my front-end development skills, particularly with modern tools like Next.js and Tailwind CSS. It serves as a living document of my growth as a developer.",
         testimonial: {
-            quote: "The attention to detail in the responsive design is excellent. The site looks and works great on every screen size.",
-            author: "Peer Reviewer",
+            quote: "This is the very portfolio you are looking at right now!",
+            author: "H. Mohamed Saleem",
         }
     }
 ];
@@ -89,8 +89,8 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
         });
     };
 
-    const screenshotHint = index === 0 ? "code editor" : "ecommerce";
-    const videoHint = index === 0 ? "code walkthrough" : "website scroll";
+    const screenshotHint = index === 0 ? "brain mri" : "portfolio screenshot";
+    const videoHint = index === 0 ? "model training" : "website scroll";
 
 
     return (

@@ -67,8 +67,8 @@ const EducationCard = () => {
                     </div>
                 </CardHeader>
                 <CardContent className="p-6 pt-0 text-muted-foreground">
-                    <p><strong>St. Joseph’s College of Engineering and Technology, Thanjavur</strong></p>
-                    <p className="mt-2">Pursuing a comprehensive curriculum focused on core computer science principles, software development, and engineering practices.</p>
+                    <p><strong>St. Joseph’s College of Engineering and Technology, Thanjavur (Anna University)</strong></p>
+                    <p className="mt-2">Pursuing a comprehensive curriculum focused on core computer science principles, software development, and emerging technologies like AI and Data Science.</p>
                 </CardContent>
             </Card>
         </motion.div>

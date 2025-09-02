@@ -7,18 +7,18 @@ import React from 'react';
 const journeyData = [
     {
         icon: <GitCommit />,
-        title: "The First Line of Code",
-        description: "My journey began with a simple 'Hello, World!' program. That initial spark of bringing something to life on a screen ignited a passion for creation and problem-solving that continues to drive me.",
+        title: "The First Spark",
+        description: "My journey began with a curiosity for how technology works, which quickly evolved into a passion for building intelligent systems. That initial spark of bringing an idea to life through code continues to drive me.",
     },
     {
         icon: <Sparkles />,
         title: "Embracing the Growth Mindset",
-        description: "I quickly learned that the tech world is always evolving. I embrace every challenge as a learning opportunity, constantly seeking to expand my skills and adapt to new technologies. I believe that consistent effort is the key to mastery.",
+        description: "I believe that the tech world is a space for continuous learning. I embrace every challenge as a learning opportunity, constantly seeking to expand my skills in AI and web development to adapt to new technologies and solve complex problems.",
     },
     {
         icon: <Rocket />,
         title: "Future Aspirations",
-        description: "My goal is to contribute to innovative projects that make a real-world impact. I am eager to collaborate with teams that push boundaries and build meaningful, high-quality software solutions for the future.",
+        description: "My goal is to contribute to innovative projects that make a real-world impact, particularly at the intersection of AI and web technology. I am eager to collaborate with teams that push boundaries and build meaningful software solutions.",
     },
 ];
 

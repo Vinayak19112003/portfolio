@@ -6,8 +6,8 @@ import GridBackground from '@/components/GridBackground';
 
 
 export const metadata: Metadata = {
-  title: 'Tamilmaran | Full Stack Developer',
-  description: "The official portfolio of Tamilmaran, a Full Stack Developer specializing in clean, efficient, and responsive web solutions.",
+  title: 'H. Mohamed Saleem | Portfolio',
+  description: "The official portfolio of H. Mohamed Saleem, a CSE student passionate about web technologies and AI.",
 };
 
 export default function RootLayout({

@@ -49,7 +49,7 @@ export function AboutSection() {
                         About Me
                     </motion.h2>
                     <motion.p className="mt-4 text-lg leading-8 text-muted-foreground" variants={itemVariants}>
-                        A highly motivated Full Stack Developer with strong knowledge of HTML, CSS, JavaScript, React, Node.js, and MongoDB. Skilled in building responsive web interfaces and developing RESTful APIs. Quick to learn new technologies with a focus on clean, efficient code. Eager to contribute to dynamic development teams and grow as a software professional.
+                        I am a Computer Science and Engineering student passionate about artificial intelligence, web technologies, and problem-solving. I enjoy learning new tools and frameworks to build innovative solutions that make an impact.
                     </motion.p>
                     <div className="mt-8">
                       <TextReveal />
@@ -60,18 +60,18 @@ export function AboutSection() {
                     >
                         <motion.div className="flex items-center gap-2" variants={itemVariants}>
                             <MapPin className="h-5 w-5 text-primary" />
-                            <span className="text-muted-foreground">Chennai, India</span>
+                            <span className="text-muted-foreground">Thanjavur, India</span>
                         </motion.div>
                         <motion.div className="flex items-center gap-2" variants={itemVariants}>
                             <Mail className="h-5 w-5 text-primary" />
-                            <a href="mailto:stamilmaran4@gmail.com" className="text-muted-foreground hover:text-primary">
-                                stamilmaran4@gmail.com
+                            <a href="mailto:hmohamedsaleem7@gmail.com" className="text-muted-foreground hover:text-primary">
+                                hmohamedsaleem7@gmail.com
                             </a>
                         </motion.div>
                         <motion.div className="flex items-center gap-2" variants={itemVariants}>
                             <Phone className="h-5 w-5 text-primary" />
-                            <a href="tel:+916374360455" className="text-muted-foreground hover:text-primary">
-                                +91 6374360455
+                            <a href="tel:+919524603619" className="text-muted-foreground hover:text-primary">
+                                +91 9524603619
                             </a>
                         </motion.div>
                     </motion.div>

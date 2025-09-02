@@ -46,7 +46,7 @@ export function ContactSection() {
                         I'm currently open to new opportunities. Feel free to reach out if you have a project in mind or just want to connect.
                     </motion.p>
                     <motion.div className="mt-8 flex items-center justify-center gap-x-6" variants={itemVariants}>
-                        <ShimmerButton href="mailto:stamilmaran4@gmail.com">
+                        <ShimmerButton href="mailto:hmohamedsaleem7@gmail.com">
                             <Mail className="mr-2 h-4 w-4" /> Email Me
                         </ShimmerButton>
                     </motion.div>
@@ -54,15 +54,15 @@ export function ContactSection() {
                         className="mt-10 flex flex-wrap justify-center gap-6 text-muted-foreground"
                         variants={itemVariants}
                     >
-                        <a href="tel:+916374360455" className="flex items-center gap-2 hover:text-primary">
+                        <a href="tel:+919524603619" className="flex items-center gap-2 hover:text-primary">
                             <Phone className="h-5 w-5" />
-                            <span>+91 6374360455</span>
+                            <span>+91 9524603619</span>
                         </a>
-                        <Link href="https://linkedin.com/in/stamilmaran" target="_blank" className="flex items-center gap-2 hover:text-primary">
+                        <Link href="https://www.linkedin.com/in/mohamed-saleem-0341ba382" target="_blank" className="flex items-center gap-2 hover:text-primary">
                             <Linkedin className="h-5 w-5" />
                             <span>LinkedIn</span>
                         </Link>
-                        <Link href="https://github.com/tamilmaran-s" target="_blank" className="flex items-center gap-2 hover:text-primary">
+                        <Link href="https://github.com/mohamedsaleem07" target="_blank" className="flex items-center gap-2 hover:text-primary">
                             <Github className="h-5 w-5" />
                             <span>GitHub</span>
                         </Link>

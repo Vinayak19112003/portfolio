@@ -25,7 +25,7 @@ export function HeroSection() {
                             textShadow: '0 4px 20px rgba(0, 180, 255, 0.3)',
                         }}
                         >
-                            Tamilmaran
+                            H. Mohamed Saleem
                         </h1>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export function HeroSection() {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="mt-4 text-2xl font-semibold text-secondary-foreground sm:text-3xl"
                         >
-                            Full Stack Developer
+                            B.E. Computer Science Student
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export function HeroSection() {
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className="mt-6 mx-auto max-w-2xl text-lg leading-8 text-muted-foreground"
                         >
-                            I craft clean, efficient, and responsive web solutions, transforming ideas into reality with modern technologies.
+                            Passionate about web technologies & AI. I enjoy learning new tools and frameworks to build innovative solutions that make an impact.
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export function HeroSection() {
                         >
                             <ShimmerButton href="#contact">Contact Me</ShimmerButton>
                             <Button asChild variant="outline" size="lg">
-                                <Link href="#projects">View My Work</Link>
+                                <Link href="#">View Resume</Link>
                             </Button>
                         </motion.div>
                     </motion.div>
