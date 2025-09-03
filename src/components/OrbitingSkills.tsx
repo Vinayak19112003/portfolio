@@ -248,17 +248,14 @@ const GlowingOrbitPath = memo(({ radius, glowColor = 'cyan', animationDelay = 0 
     cyan: {
       primary: 'rgba(6, 182, 212, 0.4)',
       secondary: 'rgba(6, 182, 212, 0.2)',
-      border: 'rgba(6, 182, 212, 0.3)'
     },
     purple: {
       primary: 'rgba(147, 51, 234, 0.4)',
       secondary: 'rgba(147, 51, 234, 0.2)',
-      border: 'rgba(147, 51, 234, 0.3)'
     },
     green: {
       primary: 'rgba(16, 185, 129, 0.4)',
       secondary: 'rgba(16, 185, 129, 0.2)',
-      border: 'rgba(16, 185, 129, 0.3)'
     }
   };
 
