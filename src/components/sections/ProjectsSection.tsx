@@ -89,7 +89,6 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
         });
     };
 
-    const screenshotHint = index === 0 ? "brain mri" : "portfolio screenshot";
     const videoHint = index === 0 ? "model training" : "website scroll";
 
 
@@ -108,12 +107,17 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                     style={style}
                 >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_hsla(var(--primary),0.2)_0%,_transparent_50%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <CardHeader className="p-0 relative">
-                        <Image src={project.screenshotUrl} alt={project.title} width={600} height={400} className="w-full h-auto" data-ai-hint={screenshotHint} />
+                    <CardHeader className="flex flex-row items-start gap-4 p-6">
+                        <div className="rounded-full bg-primary/10 p-3 mt-1">
+                           {project.icon}
+                        </div>
+                        <div>
+                            <CardTitle className="text-xl">{project.title}</CardTitle>
+                            <CardDescription className="text-base text-muted-foreground">{project.description}</CardDescription>
+                        </div>
                     </CardHeader>
-                    <CardContent className="flex-grow p-6">
-                        <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
-                        <CardDescription>{project.description}</CardDescription>
+
+                    <CardContent className="flex-grow p-6 pt-0">
                          <div className="flex flex-wrap gap-2 mt-4">
                             {project.tags.map((tag, i) => (
                                 <Badge key={i} variant="secondary">{tag}</Badge>
