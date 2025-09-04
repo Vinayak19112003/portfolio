@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { BrainCircuit, ExternalLink, Video, MessageSquareQuote, Target, Milestone } from 'lucide-react';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const projects = [
     {
@@ -15,28 +16,28 @@ const projects = [
         description: "AI-based system for detecting brain tumors in MRI scans.",
         tags: ["Python", "TensorFlow", "Keras", "NumPy", "Pandas", "Flask", "MySQL"],
         icon: <BrainCircuit className="h-8 w-8 text-primary" />,
-        screenshotUrl: "https://picsum.photos/600/400",
         videoUrl: "https://picsum.photos/1920/1080",
         contribution: "Developed a brain tumor detection system using Convolutional Neural Networks (CNN) and Graph Convolutional Neural Networks (GCNN). The project involved preprocessing MRI images, extracting features, and classifying tumor types (Glioma, Meningioma, Pituitary).",
         impact: "Achieved high accuracy and demonstrated the potential of AI in medical image analysis. This project provided a reliable AI-driven diagnostic tool and was a significant step in applying theoretical knowledge to a practical, life-saving application.",
         testimonial: {
             quote: "An impressive application of deep learning to a complex medical problem. The model's accuracy is a testament to a solid understanding of CNNs.",
             author: "Academic Advisor",
-        }
+        },
+        link: "https://github.com/mohamedsaleem07/portfolio-assets"
     },
     {
         title: "Portfolio Website",
         description: "A responsive personal portfolio to showcase my skills and projects.",
         tags: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
         icon: <ExternalLink className="h-8 w-8 text-primary" />,
-        screenshotUrl: "https://picsum.photos/600/400",
         videoUrl: "https://picsum.photos/1920/1080",
         contribution: "I built this portfolio from the ground up, focusing on a clean UI, smooth animations, and a fully responsive design to ensure a great user experience on all devices.",
         impact: "This project sharpened my front-end development skills, particularly with modern tools like Next.js and Tailwind CSS. It serves as a living document of my growth as a developer.",
         testimonial: {
             quote: "This is the very portfolio you are looking at right now!",
             author: "H. Mohamed Saleem",
-        }
+        },
+        link: "https://github.com/mohamedsaleem07/portfolio-assets"
     }
 ];
 
@@ -115,6 +116,11 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                             <CardTitle className="text-xl">{project.title}</CardTitle>
                             <CardDescription className="text-base text-muted-foreground">{project.description}</CardDescription>
                         </div>
+                         {project.link && (
+                            <Link href={project.link} target="_blank" rel="noopener noreferrer" className="ml-auto text-muted-foreground hover:text-primary transition-colors">
+                                <ExternalLink className="h-5 w-5" />
+                            </Link>
+                        )}
                     </CardHeader>
 
                     <CardContent className="flex-grow p-6 pt-0">
