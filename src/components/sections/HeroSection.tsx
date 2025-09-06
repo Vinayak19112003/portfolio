@@ -51,7 +51,7 @@ export function HeroSection() {
                         >
                             <ShimmerButton href="#contact">Contact Me</ShimmerButton>
                             <Button asChild variant="outline" size="lg">
-                                <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</Link>
+                                <Link href="/saleem.pdf" target="_blank" rel="noopener noreferrer">View Resume</Link>
                             </Button>
                         </motion.div>
                     </motion.div>
