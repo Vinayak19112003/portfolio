@@ -5,13 +5,10 @@ import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import ShimmerButton from '../ShimmerButton';
-import LightRays from '../LightRays';
-import '../LightRays.css';
 
 export function HeroSection() {
     return (
         <section id="home" className="relative w-full overflow-hidden bg-transparent py-24 sm:py-32">
-            <LightRays />
             <div className="container mx-auto px-4 relative z-10">
                 <div className="grid grid-cols-1 items-center gap-12">
                     <motion.div
