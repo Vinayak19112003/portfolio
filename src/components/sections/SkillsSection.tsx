@@ -133,7 +133,7 @@ const SkillCard = ({ category }: { category: SkillCategory }) => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--glow-x)_var(--glow-y),_hsla(var(--primary),0.15)_0%,_transparent_40%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="flex items-center gap-4 mb-4">
                     {category.icon}
-                    <h3 className="text-xl font-bold text-primary-foreground">{category.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-4">
                     {category.skills.map((skill) => (
